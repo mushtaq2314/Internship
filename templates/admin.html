@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>LeftOvers.com</title>
+    </head>
+    <link rel="stylesheet" href="static/signup.css">
+    <body  style="background-color:rgb(53,55,64);">
+        <div class="topnav" style="color: white; background-color: rgb(32,33,35);border-radius: 20px;height: 60px;">
+            <a href="index.html"style="padding-top: 15px;">Home</a>
+            <!-- <a href="services.html">Services</a> -->
+            <a href="contact.html"style="padding-top: 15px;">Contact</a>
+            <a href="login.html"style="padding-top: 15px;">LogOut</a>
+        </div>
+        <br>
+        <form class= "signup" action="/admin.html" style="box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;" method="post" >
+          {% csrf_token %}
+            <div style="color: black;font-family: sans-serif;text-decoration: underline;text-align: center;"><h1>Donation Updation</h1></div>
+            <div class="formGroup">
+                <input type="text" placeholder="Donor mail" name="dmail" required autocomplete="off">
+              </div>
+            <div class="formGroup">
+                <input type="text" placeholder="Donated To" name="aname" required autocomplete="off">
+              </div>
+              
+            <div class="formGroup">
+              <input type="email" placeholder="Acceptor mail" name="amail" required autocomplete="off">
+            </div>
+            <div class="formGroup">
+              <input type="text"  name="aphone" placeholder="Acceptor Phone" required autocomplete="off">
+             
+            </div>
+            
+            <div class="formGroup">
+                <input type="text"  placeholder="Date of donation" required autocomplete="off" name = "date">
+               
+              </div>
+              
+            
+              
+            <br>
+            <div class="formGroup">
+              <button type="submit" class="btn2">Commit Changes</button>
+              
+            </div>
+            <br>
+            <div style="text-align: center;color: black;font-family: consolas;font-size: 20px;">Already a user? <a href="login.html" style="color: black;">Login</a></div>
+     
+          </form>
+    </body>
+
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>LeftOvers.com</title>
+    </head>
+    <link rel="stylesheet" href="static/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <body  style="background-color: darkcyan;background-size: cover;">
+        <div class="topnav" style="color: white; background-color: rgb(1, 40, 40);border-radius: 20px;height: 60px;">
+            <a href="index.html"style="padding-top: 15px;">Home</a>
+            <!-- <a href="services.html">Services</a> -->
+            <a href="contact.html"style="padding-top: 15px;">Contact</a>
+            <a href="#"style="padding-top: 15px;"> Login</a>
+            <a href="signup.html"style="padding-top: 15px;">Sign Up</a>
+        </div>
+        <br><br>
+        <br><br><br><br>
+        <form class="login" action="/login.html" method="post" style="box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;">
+          {% csrf_token %}
+            <div style="color: black;font-family: sans-serif;text-decoration: underline;text-align: center;"><h1>Login</h1></div>
+            <br>
+            {% if message %}
+                
+                <p style="font-family:poppins;color:red;text-align:center;margin-top:-20px"><i class="fas fa-triangle-exclamation"></i>&nbsp {{message}}</p>
+                {%endif%}
+            <div class="formGroup">
+              
+              <input type="email" placeholder="Email ID" name="lmail" required autocomplete="off" style="font-size:15px;">
+            </div>
+            <br>
+            <div class="formGroup">
+              <input type="password" id="password" placeholder="Password" name="lpass" required autocomplete="off">
+             
+            </div>
+            <br>
+            <div class="formGroup">
+              <button type="submit"class="btn2">Login</button>
+            </div>
+            <br>
+            <div style="text-align: center;color: black;font-family: consolas;font-size: 20px;margin-bottom: 10px;">Not a user? <a href="signup.html" style="color:navy;">Signup</a></div>
+            
+            <div style="text-align: center;color: black;font-family: consolas;font-size: 20px;margin-bottom: 10px;"><a href="adminlogin.html" style="color:navy;">Admin Login</a></div>
+            
+          </form>
+          
+    </body>
+    <script>
+    </script>
+</html>

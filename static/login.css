@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&display=swap');
+.home{
+    color :black;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 70px;
+}
+/* .anim {
+  width: 10px;
+  height: 1px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+}
+
+@keyframes example {
+  0%   {background-color:black; left:0px; top:0px;}
+  25%  {background-color:black; left:310px; top:0px;}
+  50%  {background-color:black;height: 1px;width:1px; left:310px; top:-40px;}
+  75%  {background-color:black;height: 10px;width:1px; left:0px; top:-40px;}
+  100% {background-color:black; left:0px; top:0px;}
+} */
+
+.topnav{
+    /* background-color: darkblue; */
+    overflow: hidden;
+}
+.topnav a{
+    float: left;
+    color : white;
+    text-align:center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: consolas;
+    position: relative;
+}
+.topnav a:hover {
+    border : 10px white;
+    color: yellow;
+    background-color: rgb(10, 57, 57);
+  }
+  
+.topnav a.active {
+    background-color: #04AA6D;
+    color: yellow;
+  }
+
+  .formGroup{
+    display: flex;
+    justify-content: center;
+    border: 10px;
+  }
+  .formGroup input{
+    border: none;
+    width: 280px;
+    border-bottom: 3px solid black;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    /* font-weight: bold; */
+    background-color: transparent;
+    color: black;
+  }
+  ::placeholder{
+    color: black;
+    font-weight: 600;
+    font-size: medium;
+    font-weight: lighter;
+  }
+  
+   
+  /* Login form code */
+  .login{
+    margin-top: 10px;
+    margin-left: 38%;
+    border: 10px;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    width: 320px;
+    border-radius: 10px;
+  }
+
+  .btn2{
+    /* padding: 10px; */
+    padding-top: 10px;
+    padding: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: darkcyan;
+    border-style: none;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+  }
+  .btn2:hover{
+    background-color: yellow;
+    color: black;
+  }
+  .btn button:hover{
+    border-bottom: 2px solid rgb(91, 243, 131);
+  }

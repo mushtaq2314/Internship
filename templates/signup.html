@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>LeftOvers.com</title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="static/signup.css">
+    <body  style="background-color:rgb(53,55,64);">
+        <div class="topnav" style="color: white; background-color: rgb(32,33,35);border-radius: 20px;height: 60px;">
+            <a href="index.html"style="padding-top: 15px;">Home</a>
+            <!-- <a href="services.html">Services</a> -->
+            <a href="contact.html"style="padding-top: 15px;">Contact</a>
+            <a href="login.html"style="padding-top: 15px;">Login</a>
+            <a href="#"style="padding-top: 15px;">Sign Up</a>
+        </div>
+        <br>
+        <form class= "signup" action="/signup.html" method="post" >
+          {% csrf_token %}
+            <div style="color: black;font-family: sans-serif;text-decoration: underline;text-align: center;"><h1>Sign Up</h1></div>
+            {% if message %}
+                <br>
+                <p style="font-family:poppins;color:red;text-align:center;margin-top:-20px"><i class="fas fa-triangle-exclamation"></i>&nbsp {{message}}</p>
+                {%endif%}
+            <div class="formGroup">
+                <input type="text" placeholder="Name" name="sname" required autocomplete="off">
+              </div>
+              
+            <div class="formGroup">
+              <input type="email" placeholder="Email ID" name="smail" required autocomplete="off">
+            </div>
+            <div class="formGroup">
+              <input type="password" id="ida" onkeyup="check();" name="spass" placeholder="Create Password" required autocomplete="off">
+             
+            </div>
+            
+            <div class="formGroup">
+                <input type="password" id="idb" onkeyup="check();" placeholder="Confirm Password" required autocomplete="off">
+               
+              </div>
+              
+              <p id='alert' style="font-family:consolas;color:red;text-align:center;margin: 0px;"></p>
+              
+            <br>
+            <div class="formGroup">
+              <a href="dashboard.html"><button type="submit" class="btn2">Sign Up</button>
+              </a>
+            </div>
+            <br>
+            <div style="text-align: center;color: black;font-family: consolas;font-size: 20px;">Already a user? <a href="login.html" style="color: black;">Login</a></div>
+     
+          </form>
+          
+    </body>
+
+    <script>
+
+        var check = function() {
+            if (document.getElementById('ida').value ==
+              document.getElementById('idb').value) {
+              document.getElementById('alert').innerHTML = '';
+            } else {
+              document.getElementById('alert').innerHTML = ' Passwords donot match!';
+            }
+          }
+    
+    </script>
+</html>

@@ -1,0 +1,84 @@
+<html>
+    <title>LeftOvers.com</title>
+    <head></head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="static/dashboard.css">
+    <style>
+        input{
+            font-size:15px;
+            border:2px solid black;
+            border-radius:5px;
+            padding:3px;
+        }
+        .userdata p ,h1{
+            font-family: poppins;
+            position: relative;
+            left: 280px;
+            top:-210px;
+          }
+        table{
+            width: 100%;
+        }
+        table ,th,td{
+            border:2px solid black;
+            border-collapse: collapse;
+            padding: 10px 30px;
+        }
+        th{
+            background-color: #80ced6;
+            color: black;
+            /* border: 2px solid white; */
+
+        }
+        td{
+            background-color: #d5f4e6;
+        }
+    </style>
+
+<body style="background-image:url(https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&w=600);background-size: cover;">
+    <div class="topnav" style="color: white;">
+            <a href="index.html">Home</a>
+            <!-- <a href="services.html">Services</a> -->
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Logout</a>
+            <!-- <a href="signup.html">Sign Up</a> -->
+        </div>
+        <form action="/dashboard.html" method="post">
+            {% csrf_token %}
+        <div class="userdata" style="height:260px;width:930px;box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+            <div class="userpic" style="background-color:white;">
+                <img src="static/60111.jpg" style="width:230px;position:relative;top:15px;">
+            </div>
+            <h1>Profile</h1>
+            <p>Name: {{name}}</p>
+            
+            <p>Designation: <input value="{{designation}}" placeholder="Designation" name="pmail" required autocomplete="off"></p><div class="vl" style="position:relative;left:590px;height:180px;"></div>
+            <div class="contact" style="position:relative;top:-365px;"> <h1>Contact Info.</h1>
+                <p>Phone: <input value="{{phone}}" placeholder="Phone number" name="pphone" required autocomplete="off"></p>                <p>Email: {{mail}}</p></div>
+            
+                </div>
+                <button type ="submit" style="width:200px;height:40px;border-radius:10px;background-color:black;color:white;cursor:pointer;position:relative;left:490px;top:-50px;">Save Changes</button>
+            </form>
+
+        <div class="home">
+            <p>Happy to know that you want to donate again!!</p>
+            
+            <form  action="signup.html" method="post" style="font-family: consolas;color:white;font-size: 20px;">
+                
+                What would you like to donate: <input class="input" type="text" name="" placeholder="" id=""><br><br>
+                Enter your address: <input class="input" type="text" name="" placeholder="" id="">
+                <br><br>
+                Enter your mobile number: <input class="input" type="text" name="" placeholder="" id="">
+                <br><br>
+                <a href="done.html"><button type="button" class="btn2">Done</button>
+                </a>
+            </form>
+        </div>
+        <div style="font-family: poppins;font-size: 25px;"><a href="previous.html">View Previous Donations</a></div>
+
+        
+        
+        
+    </body>
+</html>

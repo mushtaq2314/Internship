@@ -1,0 +1,75 @@
+<html>
+    <title>LeftOvers.com</title>
+    <head></head>
+    <link rel="stylesheet" href="static/dashboard.css">
+    <style>
+        input{
+            font-size:15px;
+            border:2px solid black;
+            border-radius:5px;
+            padding:3px;
+        }
+        .userdata p ,h1{
+            font-family: poppins;
+            position: relative;
+            left: 280px;
+            top:-210px;
+          }
+        table{
+            width: 100%;
+        }
+        table ,th,td{
+            border:2px solid black;
+            border-collapse: collapse;
+            padding: 10px 30px;
+            text-align:center;
+        }
+        th{
+            background-color: #80ced6;
+            color: black;
+            /* border: 2px solid white; */
+
+        }
+        td{
+            background-color: #d5f4e6;
+        }
+    </style>
+
+<body style="background-image:url(https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&w=600);background-size: cover;">
+    <div class="topnav" style="color: white;">
+            <a href="index.html">Home</a>
+            <!-- <a href="services.html">Services</a> -->
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Logout</a>
+            <!-- <a href="signup.html">Sign Up</a> -->
+        </div>
+        
+
+        <div style="font-family: poppins;font-size: 50px;color:yellow;">Previous Donations:
+        <table >
+            <th>Donated to</th>
+            <th>Donation status</th>
+            <th>Acceptor's contact Number</th>
+            <th>Acceptor's Email</th>
+            <th>Date of Donation</th>
+            {% for x in data %}
+            <tr>
+                <td>{{x.0}}</td>
+                <td>Donated</td>
+                <td>{{x.1}}</td>
+                <td>{{x.2}}</td>
+                <td>{{x.3}}</td>
+
+                {% comment %} 
+                <td>{{phone[x]}}</td>
+                <td>{{email[x]}}</td>
+                <td>{{date[x]}}</td>  {% endcomment %}
+            </tr>
+            {% endfor %}
+            
+        </table>
+        </div>
+        
+        
+    </body>
+</html>
